@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "commander": "^2.8.1",
+    "mailgun-js": "^0.6.9",
+    "moment": "^2.10.3",
+    "shelljs": "^0.5.0",
+    "shuffle-array": "^0.1.0",
+    "toml": "^2.2.2",
+    "winston": "^1.0.0"
+  }
+}

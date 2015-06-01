@@ -1,0 +1,20 @@
+caspoerJsPath = "/usr/local/bin/casperjs"
+
+[mailgun]
+apikey = "key-xxxxxxx"
+domain = "somedomain"
+from = "Swagbucks checker <some@where.com>"
+to = "some@where.com"
+
+[accounts]
+  [accounts.acct1]
+  email = "acct1@hotmail.com"
+  password = "Password1"
+
+  [accounts.acct2]
+  email = "acct2@hotmail.com"
+  password = "Password2"
+
+  [accounts.acct3]
+  email = "acct3@hotmail.com"
+  password = "Password3"
