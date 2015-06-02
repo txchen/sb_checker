@@ -68,6 +68,14 @@ function main() {
     invokeCasper(acct.email, acct.password)
   }
 
+  allsummary += '\nDaily limit:'
+  allsummary += '\nSBTV - 36'
+  allsummary += '\nEntertainow - 18'
+  allsummary += '\nMoviecli.ps - 18'
+  allsummary += '\nSportly.tv - 10'
+  allsummary += '\nIndymusic.tv - 18'
+  allsummary += '\nLifestylz.tv - 18'
+
   console.log(allsummary)
   if (!program.noemail) {
     sendMail('Swagbucks Status: ' + moment().format('YYYYMMDD-HHmmss'), allsummary)
