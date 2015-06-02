@@ -30,7 +30,7 @@ if (!casper.cli.has('email') || !casper.cli.has('pass')) {
 var email = casper.cli.get('email')
 var pass = casper.cli.get('pass')
 
-casper.start('http://www.swagbucks.com/p/login', function fillInLoginInfo() {
+casper.start('http://search.swagbucks.com/p/login', function fillInLoginInfo() {
   this.fill('form[id="loginForm"]', {
     'emailAddress': email,
     'password': pass
@@ -68,9 +68,14 @@ casper.thenOpen('http://www.swagbucks.com/?cmd=sb-acct-ledger&allTime=false', fu
       dict[category] = count
     }
   })
-  Object.keys(dict).forEach(function(key) {
-    log(key + ':' + dict[key], 'summary')
+  var keys = Object.keys(dict)
+  var todaySB = 0
+  keys.sort()
+  keys.forEach(function(key) {
+    log(key + ': ' + dict[key], 'summary')
+    todaySB += dict[key]
   })
+  log('Today SB: ' + todaySB, 'summary')
 })
 
 casper.run(function() { this.exit() })
